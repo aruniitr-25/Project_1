@@ -17,7 +17,7 @@ Text
 
 A "rulebook" file listing the chromosomes to keep, in the specific desired order.
 
-🛠 Prerequisites
+#### Prerequisites
 
 Python 3.x
 
@@ -47,4 +47,4 @@ bash
 cat shuf.a.bed.gz shuf.b.bed.gz | gzip -d | python3 project1.py > sorted_output.bed
 ```
 
-Output: `sorted_output.bed `(A fully sorted BED file).
+#### Output: `sorted_output.bed `(A fully sorted BED file).
