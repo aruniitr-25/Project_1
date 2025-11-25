@@ -2,7 +2,7 @@ Project 1: Quick Bed Sort (Pandas Version)
 
 Goal: Efficiently merge, filter, and sort genomic interval data (BED files) using the Pandas library. This approach leverages vectorized operations for high performance and uses categorical data types to enforce a custom chromosome sort order.
 
-🚀 Key Features
+ Key Features
 
 Data Science Approach: Uses pandas to treat genomic data as structured DataFrames, making the code concise and highly readable.
 
@@ -12,7 +12,7 @@ Secondary Sorting: Automatically handles multi-column sorting (Chromosome $\righ
 
 Robust Parsing: Handles standard tab-separated values and automatically skips comments or malformed headers.
 
-📂 File Structure
+ File Structure
 
 File
 
@@ -43,7 +43,7 @@ To install pandas, run:
 pip install pandas
 
 
-⚙️ Usage
+ Usage
 
 1. Generate the Rulebook
 
