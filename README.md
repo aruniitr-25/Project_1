@@ -28,7 +28,7 @@ This script requires **Python** and the **`pandas`** library.
 2.  **Save the Script:**
     Save the provided Python code as a file named, for example, `bedsort.py`.
 
-## ⚙️ Configuration: The Selection File
+##  Configuration: The Selection File
 
 The custom chromosome order is defined in a **tab-separated values (TSV)** file. By default, the script looks for a file named **`standard_selection.tsv`**.
 
@@ -72,4 +72,4 @@ cat unsorted.bed | python bedsort.py > sorted.bed
 
 -----
 
-Would you like to generate an example `standard_selection.tsv` file for the human genome?
+
