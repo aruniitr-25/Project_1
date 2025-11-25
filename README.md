@@ -2,20 +2,20 @@ Here is a copy-paste format README for your GitHub repository.
 
 -----
 
-# 🧬 BedSort
+#  BedSort
 
 **BedSort** is a Python script that provides **custom, rule-based sorting** for genomic interval files (like **BED** format) read from standard input (`stdin`). Unlike standard lexical sorting, this tool allows you to define a specific, non-alphabetic order for chromosomes (contigs) based on a separate configuration file.
 
 This is particularly useful in genomics pipelines where a specific chromosome order (e.g., `chr1`, `chr2`, ..., `chrX`, `chrY`, `chrM`, followed by unplaced contigs) is required for consistency or downstream tool compatibility.
 
-## ✨ Features
+##  Features
 
   * **Rule-Based Chromosome Sorting:** Defines the exact order of chromosomes using an external `tsv` file.
   * **Genomic Coordinates Sort:** After custom chromosome sorting, intervals are sorted by **start position** and then **end position**.
   * **Standard I/O:** Reads data from `stdin` and writes the sorted output to `stdout`, making it easy to integrate into shell pipelines.
   * **Pandas-Powered:** Efficient data handling and sorting using the `pandas` library.
 
-## 🚀 Installation
+##  Installation
 
 This script requires **Python** and the **`pandas`** library.
 
@@ -48,7 +48,7 @@ This file must contain **a single column** listing the desired chromosome names 
 | GL000192.1 |
 | ... |
 
-## 💡 Usage
+##  Usage
 
 Run the script by piping your unsorted data (e.g., a BED file) into it.
 
@@ -68,9 +68,7 @@ cat unsorted.bed | python bedsort.py > sorted.bed
 | **5. Sort** | Sorts first by the custom `chrom` order, then by `start`, then by `end`. |
 | **6. Write Output** | Writes the final sorted data to `stdout` without headers or an index. |
 
-## 🤝 Contributing
 
-Contributions are welcome\! Feel free to open an issue or submit a pull request if you have suggestions for improvements or bug fixes.
 
 -----
 
