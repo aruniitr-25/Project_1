@@ -1,11 +1,25 @@
-Project 2: Rescale to Reference
+# README — BED File Custom Chromosome Sorter
 
-Goal: Correct the fragment length bias in a query dataset by statistically resampling it to match a "perfect" reference distribution. This pipeline removes "noise" (short fragment peaks) while retaining signal (nucleosome peaks) using a probabilistic rejection sampling method.
+This script sorts BED-like genomic interval files using a **custom chromosome order** provided in a rulebook file (`standard_selection.tsv`).  
+It reads BED data from **STDIN** and writes sorted output to **STDOUT**, making it ideal for use in Unix pipelines.
 
-Key Features
+---
 
-Hybrid Pipeline: Combines the speed of Bash/Awk for text processing with the logic of Python for statistical calculation.
+## Features
+- Reads custom chromosome order from a file (`standard_selection.tsv`)
+- Accepts BED/TSV data from STDIN
+- Filters out chromosomes not present in the rulebook
+- Sorts by:
+  1. Chromosome (custom order)
+  2. Start position
+  3. End position
+- Outputs TSV to STDOUT with no header
 
-Memory Efficient: Uses stream processing (pipes) to handle millions of genomic records without loading the whole file into RAM.
+---
 
-Probabilistic Sampling: Implements a "Keep Probability" rule for every fragment length ($0$ to $1.0$) rather than simple hard thresholds.
+## Required Files
+
+### 1. standard_selection.tsv
+A single-column file listing chromosome names in the desired order:
+
+
